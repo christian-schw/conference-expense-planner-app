@@ -1,1 +1,1 @@
-# coding-project-template
+# Practice Project: Conference Expense Planner App
