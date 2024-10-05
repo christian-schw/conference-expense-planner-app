@@ -25,8 +25,11 @@ export const mealsSlice = createSlice({
             selected: false
         },
     ],
+
     reducers: {
         toggleMealSelection: (state, action) => {
+            const meal = state[action.payload];
+            meal.selected = !meal.selected;
         },
     },
 });
