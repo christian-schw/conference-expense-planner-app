@@ -13,7 +13,18 @@ const ConferenceEvent = () => {
     const avItems = useSelector((state) => state.av);
     const mealsItems = useSelector((state) => state.meals);
     const dispatch = useDispatch();
+
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
+    const items = getItemsFromTotalCost();
+
+    const venueTotalCost = calculateTotalCost("venue");
+    const avTotalCost = calculateTotalCost("av");
+    const mealsTotalCost = calculateTotalCost("meals");
+    const totalCosts = {
+        venue: venueTotalCost,
+        av: avTotalCost,
+        meals: mealsTotalCost,
+    };
 
 
     const handleToggleItems = () => {
@@ -55,8 +66,42 @@ const ConferenceEvent = () => {
 
     const getItemsFromTotalCost = () => {
         const items = [];
+
+        /*
+          The type (e.g. meal or venue) is added as property
+          to each item so that each item can be later distinguished / categorized.
+        */
+
+        venueItems.forEach((item) => {
+            if (item.quantity > 0) {
+                items.push({ ...item, type: "venue" });
+            }
+        });
+
+        avItems.forEach((item) => {
+            if (
+                item.quantity > 0 &&
+                !items.some((i) => i.name === item.name && i.type === "av")
+            ) {
+                items.push({ ...item, type: "av" });
+            }
+        });
+
+        mealsItems.forEach((item) => {
+            if (item.selected) {
+                const itemForDisplay = { ...item, type: "meals" };
+
+                // Also add the specified number of people as a property
+                if (item.numberOfPeople) {
+                    itemForDisplay.numberOfPeople = numberOfPeople;
+                }
+
+                items.push(itemForDisplay);
+            }
+        });
+
+        return items;
     };
-    const items = getItemsFromTotalCost();
 
     const ItemsDisplay = ({ items }) => {
 
@@ -81,9 +126,6 @@ const ConferenceEvent = () => {
         }
         return totalCost;
     };
-    const venueTotalCost = calculateTotalCost("venue");
-    const avTotalCost = calculateTotalCost("av");
-    const mealsTotalCost = calculateTotalCost("meals");
 
     const navigateToProducts = (idType) => {
         if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
