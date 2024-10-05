@@ -15,16 +15,6 @@ const ConferenceEvent = () => {
     const dispatch = useDispatch();
 
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
-    const items = getItemsFromTotalCost();
-
-    const venueTotalCost = calculateTotalCost("venue");
-    const avTotalCost = calculateTotalCost("av");
-    const mealsTotalCost = calculateTotalCost("meals");
-    const totalCosts = {
-        venue: venueTotalCost,
-        av: avTotalCost,
-        meals: mealsTotalCost,
-    };
 
 
     const handleToggleItems = () => {
@@ -166,6 +156,18 @@ const ConferenceEvent = () => {
             }
         }
     }
+
+
+    const venueTotalCost = calculateTotalCost("venue");
+    const avTotalCost = calculateTotalCost("av");
+    const mealsTotalCost = calculateTotalCost("meals");
+    const totalCosts = {
+        venue: venueTotalCost,
+        av: avTotalCost,
+        meals: mealsTotalCost,
+    };
+    const items = getItemsFromTotalCost();
+
 
     return (
         <>
