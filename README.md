@@ -63,6 +63,21 @@ With regard to my role:
 The web project is not hosted and is therefore not available via the Internet / URL.<br>
 The project was also developed using the IBM Cloud IDE. Setup not tested on private IDE.<br>
 <br>
+Setup description from the course (slightly modified for my own project) in the IBM Cloud IDE:<br>
+1. Clone repository
+2. Change terminal path to folder "conference-expense-planner-app". E.g.:
+```
+cd conference-expense-planner-app
+```
+3. Install necessary packages to execute the application using npm:
+```
+npm install
+```
+4. Execute this command to run the application, which will start the application server running on port number 4173.<br>
+In IBM Cloud IDE there was an extra feature for this, where the port was entered and the application was started.<br>
+```
+npm run preview
+```
 <br>
 
 
