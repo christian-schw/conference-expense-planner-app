@@ -12,7 +12,11 @@ Home screen:<br>
 ![conference-planner-landing-page](https://github.com/user-attachments/assets/4eece5f9-59d6-4d80-9e16-ea1931458ce0)
 
 After clicking on the “Get Started” button, the selection that the user can make appears:<br>
-TODOOOOOOO: Insert image when pixabay website available<br>
+
+![image](https://github.com/user-attachments/assets/f1a61246-f153-46da-9143-b9c6952c5946)
+
+![image](https://github.com/user-attachments/assets/a62fbc4d-ab14-4ce5-8d5b-fe23433194b5)
+
 <br>
 Once the user has made his selection, he can display the corresponding costs as a table:<br>
 
@@ -78,6 +82,11 @@ In IBM Cloud IDE there was an extra feature for this, where the port was entered
 ```
 npm run preview
 ```
+
+![image](https://github.com/user-attachments/assets/a372cc61-1e55-4c79-be6e-e17d2a0bc741)
+
+5. The application can be stopped with Ctrl + C.<br>
+Step 4 must be repeated for each change to be visible.<br>
 <br>
 
 
