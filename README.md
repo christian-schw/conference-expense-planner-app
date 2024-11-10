@@ -1,7 +1,28 @@
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
+
 # Conference Expense Planner App
+<!-- TABLE OF CONTENTS -->
+<details open>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#course-information">Course Information</a></li>
+    <li>
+      <a href="#information-about-the-project">Information about the Project</a>
+      <ul>
+        <li><a href="#general">General</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<br>
 
 
-
+## Introduction
 This repository was created as part of IBM's "Developing Front End Apps with React" course.<br>
 A React application was created as a practice project: Conference Expense Planner.<br>
 <br>
@@ -24,7 +45,8 @@ Once the user has made his selection, he can display the corresponding costs as 
 
 ![Total Cost Table Part2](https://github.com/user-attachments/assets/323e722a-0e97-45a6-aa47-71a1d5a2cc1c)
 
-More is currently not possible in this application.<br>
+More is currently not possible in this application.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 <br>
 
@@ -34,6 +56,7 @@ More is currently not possible in this application.<br>
 Title: Developing Front End Apps with React<br>
 Type: Practice Project<br>
 Course Provider: IBM<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 <br>
 
@@ -59,6 +82,7 @@ With regard to my role:
 - React
 - Redux (with Redux Toolkit)
 - IBM Cloud IDE (based on Theia and Container)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 <br>
 
@@ -87,9 +111,11 @@ npm run preview
 
 5. The application can be stopped with Ctrl + C.<br>
 Step 4 must be repeated for each change to be visible.<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 
 
 
 ## Contact
 If you have any questions, please feel free to reach out via email: christian-schwanse (at) gmx.net
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
